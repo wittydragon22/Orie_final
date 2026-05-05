@@ -17,6 +17,13 @@ The project is organized as a reproducible Python package with runnable scripts,
 - **File used:** January 2025 Yellow Taxi Parquet file
 - **Raw file URL:** `https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-01.parquet`
 
+Raw and processed Parquet files are not committed to GitHub because of file size. The empty `data/raw/` and `data/processed/` folders are kept with `.gitkeep` files. The data can be recreated by running:
+
+```bash
+python scripts/download_data.py
+python scripts/build_dataset.py
+```
+
 The raw TLC trip data include pickup and drop-off times, pickup and drop-off location IDs, trip distance, fare amount, passenger count, payment type, and other trip-level fields.
 
 After cleaning and aggregation, the processed model dataset contains:
@@ -163,7 +170,9 @@ nyc-taxi-demand/
 ├── pyproject.toml
 ├── data/
 │   ├── raw/
+│   │   └── .gitkeep
 │   └── processed/
+│       └── .gitkeep
 ├── scripts/
 │   ├── download_data.py
 │   ├── build_dataset.py
