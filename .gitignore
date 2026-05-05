@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.env/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large TLC trip files — re-fetch with scripts/download_data.py
+nyc-taxi-demand/data/raw/*.parquet
+nyc-taxi-demand/data/processed/*.parquet
